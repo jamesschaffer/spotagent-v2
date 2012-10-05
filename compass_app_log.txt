@@ -1,0 +1,27 @@
+2012-10-04 21:34:02     error sass/responsive.scss (Line 8 of sass/_responsive-navbar.scss: Invalid CSS after "...ia (max-width: ": expected expression (e.g. 1px, bold), was "$navbarCollapse...")
+2012-10-04 21:34:02    create css/responsive.css 
+2012-10-04 21:34:23     error sass/responsive.scss (Line 8 of sass/_responsive-navbar.scss: Invalid CSS after "...ia (max-width: ": expected expression (e.g. 1px, bold), was "$navbarCollapse...")
+2012-10-04 21:34:23 overwrite css/responsive.css 
+2012-10-04 21:35:42     error sass/responsive.scss (Line 8 of sass/_responsive-navbar.scss: Invalid CSS after "...ia (max-width: ": expected expression (e.g. 1px, bold), was "$navbarCollapse...")
+2012-10-04 21:35:42 overwrite css/responsive.css 
+2012-10-04 21:36:17     error sass/responsive.scss (Line 8 of sass/_responsive-navbar.scss: Invalid CSS after "...ia (max-width: ": expected expression (e.g. 1px, bold), was "$navbarCollapse...")
+2012-10-04 21:36:17 overwrite css/responsive.css 
+2012-10-04 21:38:33     error sass/responsive.scss (Line 8 of sass/_responsive-navbar.scss: Invalid CSS after "...ia (max-width: ": expected expression (e.g. 1px, bold), was "$navbarCollapse...")
+2012-10-04 21:38:33 overwrite css/responsive.css 
+2012-10-04 21:38:51     error sass/responsive.scss (Line 8 of sass/_responsive-navbar.scss: Invalid CSS after "...ia (max-width: ": expected expression (e.g. 1px, bold), was "$navbarCollapse...")
+2012-10-04 21:38:51 identical css/responsive.css 
+2012-10-04 21:39:14     error sass/responsive.scss (Line 8 of sass/_responsive-navbar.scss: Invalid CSS after "...ia (max-width: ": expected expression (e.g. 1px, bold), was "$navbarCollapse...")
+2012-10-04 21:39:14 identical css/responsive.css 
+2012-10-04 21:41:21     error sass/responsive.scss (Line 8 of sass/_responsive-navbar.scss: Invalid CSS after "...ia (max-width: ": expected expression (e.g. 1px, bold), was "$navbarCollapse...")
+2012-10-04 21:41:21 identical css/responsive.css 
+2012-10-04 21:41:30     error sass/responsive.scss (Line 8 of sass/_responsive-navbar.scss: Invalid CSS after "...ia (max-width: ": expected expression (e.g. 1px, bold), was "$navbarCollapse...")
+2012-10-04 21:41:30 overwrite css/responsive.css 
+2012-10-04 21:42:49     error sass/responsive.scss (Line 8 of sass/_responsive-navbar.scss: Invalid CSS after "...ia (max-width: ": expected expression (e.g. 1px, bold), was "$navbarCollapse...")
+2012-10-04 21:42:49 overwrite css/responsive.css 
+2012-10-04 21:45:19    create css/bootstrap.css 
+2012-10-04 21:45:19     error sass/responsive.scss (Line 8 of sass/_responsive-navbar.scss: Invalid CSS after "...ia (max-width: ": expected expression (e.g. 1px, bold), was "$navbarCollapse...")
+2012-10-04 21:45:19    create css/responsive.css 
+2012-10-04 21:46:23     error sass/responsive.scss (Line 8 of sass/_responsive-navbar.scss: Invalid CSS after "...ia (max-width: ": expected expression (e.g. 1px, bold), was "$navbarCollapse...")
+2012-10-04 21:46:23 overwrite css/responsive.css 
+2012-10-04 21:48:23 overwrite css/responsive.css 
+2012-10-04 21:48:42 identical css/responsive.css 
