@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Spot Agent Prototype</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/styles.css">
+
+        <style>
+            
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+        </style>
+
+        <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css' rel='stylesheet' />
+
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+        <script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.js'></script>
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
+        <!--            
+        ___ ____ ___     _  _ ____ _  _ 
+         |  |  | |__]    |\ | |__| |  | 
+         |  |__| |       | \| |  |  \/  
+         
+         -->   
+
+        <div class="navbar navbar-fixed-top">
+            <div class="logo">
+            </div>
+
+            <div class="btn-group pull-right" data-toggle="buttons-radio">
+                <a class="btn search" id="btnSearch">
+                    <i class="search-address">
+                    </i>
+                </a><a class="btn my-location" id="btnMyLocation">
+                    <i class="my-location">
+                    </i>
+                </a>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <form class="form-search">
+
+                <input type="text" class="input-medium search-query"placeholder="Enter address">
+
+                <i class="icon-remove" id="btnRemoveSearch"></i>
+            </form>
+
+        </div>
+
+        <div class="container">
+
+            <%= erb :result %>
+
+            <!--
+            _  _ ____ ___  
+            |\/| |__| |__] 
+            |  | |  | |    
+                           
+            -->
+            <div class="pin-wrap">
+                <div class="pin"></div>
+                <div class="pin"></div>
+            </div>
+            <div id='map'>
+                
+            </div>
+
+        </div> <!-- /container -->
+        <div class="loading">
+            <div class="loading-content">
+                <div class="preloader"></div>
+                <h4>Triangulating yo position!</h4>
+                <a href="#" class=" btn cancel">Cancel <i class="icon-remove" id="btnRemoveSearch"></i></a>
+            </div>
+        </div>
+        <script src="js/vendor/jquery-1.8.2.min.js"></script>
+        <script src="js/map.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
