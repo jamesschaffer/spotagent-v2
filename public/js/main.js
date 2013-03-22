@@ -8,9 +8,14 @@ $(function(){
 			setTimeout(function(){
 				$('.pin-wrap .pin:first-child').addClass('main');
 				$('.pin-wrap .pin:last-child').addClass('pulse');
-			}, 2200);
-			
-	}
+			}, 2200);		
+	};
+
+	var resultTimeOut = function(){
+		setTimeout(function(){
+			$('.parking-result').removeClass('hide');
+		}, 3000);
+	};
 
 	$('.btn.search').click(function(){
 		//Provides background on button
@@ -27,7 +32,9 @@ $(function(){
 
 	$('.btn.my-location').click(function(){
 		$(this).toggleClass('active');
-		$('.parking-result').toggleClass('hide');
+		
+		resultTimeOut();
+		
 		loadingWindow();
 		$('.address').text('267 W 31st St');
 	});
@@ -50,13 +57,13 @@ $(function(){
 		//Puts text into address div
 		$('.address').text($('.search-query').val());	
 
-		$('.parking-result').removeClass('hide');
+		resultTimeOut();
 
 		loadingWindow();
 	});
 
 	//Slides up the history calendar thingy
-	$('.history-btn').click(function(){
+	/* $('.history-btn').click(function(){
 		var heightReSize = $('.daily-breakdown').css({'height':(($(window).height())-300)+'px'});
 		var sectionHeight = $('.daily-breakdown').height();
 		
@@ -70,6 +77,11 @@ $(function(){
 		} else {
 			return
 		}
+	})
+	*/
+
+	$('.history-btn').click(function(){
+		$('.parking-result').toggleClass('show-chart');
 	})
 });
 
