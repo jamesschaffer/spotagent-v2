@@ -17,6 +17,44 @@ $(function(){
 		}, 3000);
 	};
 
+	var chartRender = function(){
+		
+		var $chart = $('.chart');
+
+		for(var i = 0; i <= 95; i++){
+		    var randomNumber = Math.ceil(Math.random()*100);
+		    var li = $('<li></li>');
+		    li.css('height', randomNumber + 'px');
+		    $chart.append(li);
+		    
+		};
+
+		$('.chart li').each(function(){
+		    if ($(this).height() < 33) {
+		        $(this).addClass("low");
+		    } else if ($(this).height() < 66) {
+		        $(this).addClass("med");
+		    } else {
+		        $(this).addClass("high");
+		    }
+		});
+	}
+
+	chartRender();
+
+	//Handles bottom chart with
+	/*
+	var historyWidth = $('.history-contain');
+	var dayWidth = $('.day');
+	
+	historyWidth.width(($(window).width()) * 7);
+
+	$(window).resize(function(){
+	   var newwidth = $(window).innerWidth();   
+	   historyWidth.width((newwidth * 7));   
+	});
+	*/
+
 	$('.btn.search').click(function(){
 		//Provides background on button
 		$(this).toggleClass('active');
@@ -28,7 +66,7 @@ $(function(){
 		$('.search-query').focus();
 
 		$('.parking-result').addClass('hide');
-	})
+	});
 
 	$('.btn.my-location').click(function(){
 		$(this).toggleClass('active');
@@ -62,34 +100,19 @@ $(function(){
 		loadingWindow();
 	});
 
-	//Slides up the history calendar thingy
-	/* $('.history-btn').click(function(){
-		var heightReSize = $('.daily-breakdown').css({'height':(($(window).height())-300)+'px'});
-		var sectionHeight = $('.daily-breakdown').height();
-		
-		if (sectionHeight === 0){
-			heightReSize
-		    $(window).resize(function(){
-		    	heightReSize
-		    });
-		} else if (sectionHeight > 0){
-			$('.daily-breakdown').css('height', '0');
-		} else {
-			return
-		}
-	})
-	*/
 
 	$('.history-btn').click(function(){
 		$('.parking-result').toggleClass('show-chart');
-	})
+		$('#map').toggleClass('small');
+	});
+
 });
 
 //Toggle for the pop down - DONE
 //Ability to clear an input - DONE
 //Grab value of input and inject HTML into address div - DONE
-//Show loading window 
-//Drop or expand pin, animate gradient pulse 
-//Slide result up into view with address value
-//Delay then run bar animation
-//Build Error window
+//Show loading window - DONE
+//Drop or expand pin, animate gradient pulse  - DONE
+//Slide result up into view with address value - DONE
+//Delay then run bar animation - DONE
+//Build Error window 
