@@ -50,6 +50,31 @@ $bad-bar: rgba(204, 0, 0, 1);
  	animation-iteration-count: $count;
 }
 
+
+//Fonts
+@font-face {
+	font-family: 'Interstate-ExtraLightCond';
+	src: url('/fonts/interstateextralightcond.eot');
+	src: url('/fonts/interstateextralightcond.eot?#iefix') format('embedded-opentype'),
+	url('/fonts/interstateextralightcond.woff') format('woff'),
+	url('/fonts/interstateextralightcond.ttf') format('truetype'),
+	url('/fonts/interstateextralightcond.svg#interstateextralightcond') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Interstate-BoldCond';
+	src: url('/fonts/interstateboldcond.eot');
+	src: url('/fonts/interstateboldcond.eot?#iefix') format('embedded-opentype'),
+	url('/fonts/interstateboldcond.woff') format('woff'),
+	url('/fonts/interstateboldcond.ttf') format('truetype'),
+	url('/fonts/interstateboldcond.svg#interstateboldcond') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+//Page styles
 * {
 	@include box-sizing(border-box);
 }
@@ -187,13 +212,14 @@ a {
 	}
 	input {
 		width: 100%;
-		font-size: 16px;
+		font-size: 18px;
+		line-height: 18px;
 		padding: 4px;
 		border: none;
 		border-bottom: 2px solid #999;
 		margin: 4px 0 0 0;
 		color: #FFF;
-		font-family: Helvetica, Arial, sans-serif;
+		font-family: Interstate-BoldCond, Helvetica, Arial, sans-serif;
 		background: transparent;
 		@include transition-property(background-color, border-color);
 		@include transition-duration(150ms); 
@@ -286,11 +312,12 @@ a {
 	color: #DADADA;
 	font-weight: 100;
 	height: 35px;
-	font-size: 20px;
+	font-size: 24px;
 	padding: 8px 14px 7px 14px;
 	margin-bottom: 10px;
-	@include text-shadow(0 0 4px rgba(0,0,0,.5));
+	@include text-shadow(0 -1px 0 #000);
 	background: rgba(0,0,0,.3);
+	font-family: Interstate-BoldCond;
 }
 
 .meter {
@@ -311,18 +338,21 @@ a {
 	h3 {
 		width: 100%;
 		padding-right: 52px;
-		color: lighten(#677254, 30%);
 		@include text-shadow(0 -1px 0 darken(#677254, 70%));
+		font-family: Interstate-ExtraLightCond;
+		font-size: 22px;
+		color: lighten(#677254, 60%);
 	}
 }
 
 .meter-time {
-	color: lighten(#677254, 60%);
+	color: lighten(#677254, 30%);
 	display: block;
+	font-family:Interstate-BoldCond;
 }
 
 .history-contain {
-	width: 3400px;
+	width: 3520px;
 	height: 155px;
 	position: absolute;
 	top: 0;
@@ -369,8 +399,10 @@ a {
 	}
 	h5 {
 		color: #666;;
-		padding: 10px 0 6px 0;
+		padding: 8px 0 6px 0;
 		text-align: left;
+		font-size: 16px;
+		font-family: Interstate-ExtraLightCond;
 	}
 }
 
@@ -396,6 +428,15 @@ a {
 			background-color: $bad-bar;
 		}
 	}
+}
+
+.mid-bar {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 2px;
+	border-top: 1px dotted rgba(255,255,255,.3);
 }
 
 .time-label {
@@ -560,7 +601,7 @@ a {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	z-index: -1px;
+	z-index: -1;
 	background: rgba(0,0,0, .3);
 	opacity: 0;
 	@include transition-property(opactiy);
@@ -586,8 +627,9 @@ a {
 		margin-left: -120px;
 	}
 	h4 {
-		font-size: 18px;
+		font-size: 20px;
 		margin-bottom: 16px;
+		font-family: Interstate-BoldCond;
 	}
 }
 
@@ -596,7 +638,8 @@ a {
 	display: block;
 	width: 100px;
 	color: #FFF;
-	padding: 8px 12px;
+	padding: 10px 12px 8px 12px;
+	font-family: Interstate-BoldCond;
 	@include border-radius(4px);
 	&.cancel {
 		text-align: left;
@@ -606,10 +649,11 @@ a {
 		i {
 			position: absolute;
 			right: 0;
-			top: 0;
+			top: 3px;
 		}
 		&:active {
 			top: 3px;
+			color: lighten($primaryColor, 50%);
 			background:darken($primaryColor, 5%);
 			@include box-shadow(0 1px 0 darken($primaryColor, 10%), inset 0 1px 0 lighten($primaryColor, 20%), 0 0 20px rgba(0,0,0,.8));
 		}
