@@ -440,6 +440,8 @@ a {
 }
 
 .time-label {
+	display: block;
+	margin-top: 1px;	
 	li {
 		overflow: visible;
 		text-align: center;

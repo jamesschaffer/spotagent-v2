@@ -24,7 +24,7 @@ $(function(){
 		for(var i = 0; i <= 95; i++){
 		    var randomNumber = Math.ceil(Math.random()*100);
 		    var li = $('<li></li>');
-		    li.css('height', randomNumber + 'px');
+		    li.css('height', randomNumber + '%');
 		    $chart.append(li);
 		    
 		};
