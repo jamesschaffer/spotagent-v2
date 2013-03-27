@@ -115,6 +115,18 @@ a {
 
 }
 
+.map-wrap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding-bottom: 0;
+	height: 100%;
+	width: 100%;
+	@include transition-property(height);
+  	@include transition-duration(300ms); 
+  	@include transition-timing-function(ease-in);
+}
+
 #map {
 	display: block;
 	position: absolute;
@@ -124,13 +136,6 @@ a {
 	width: 100%;
 	min-width: 100%;
 	z-index: 1;
-	//FOR IPHONE ONLY, TOTAL HACK CITY!
-	&.small {
-	 	@include transition-property(all);
-	  	@include transition-duration(300ms); 
-	  	@include transition-timing-function(ease-in);
-		@include translate3d(0, -74px, 0);		
-	}
 }
 
 .navbar {
@@ -547,7 +552,7 @@ a {
 .pin-wrap {
 	position: absolute;
 	left: 50%;
-	top: 35%;
+	top: 50%;
 	height: 24px;
 	width: 24px;
 	display: block;	

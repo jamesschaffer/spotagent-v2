@@ -40,20 +40,9 @@ $(function(){
 		});
 	}
 
+	var mapWrap = $('.map-wrap').height()
+
 	chartRender();
-
-	//Handles bottom chart with
-	/*
-	var historyWidth = $('.history-contain');
-	var dayWidth = $('.day');
-	
-	historyWidth.width(($(window).width()) * 7);
-
-	$(window).resize(function(){
-	   var newwidth = $(window).innerWidth();   
-	   historyWidth.width((newwidth * 7));   
-	});
-	*/
 
 	$('.btn.search').click(function(){
 		//Provides background on button
@@ -64,8 +53,6 @@ $(function(){
 
 		//Puts focus right on the input so the keyboard slides up
 		$('.search-query').focus();
-
-		$('.parking-result').addClass('hide');
 	});
 
 	$('.btn.my-location').click(function(){
@@ -103,16 +90,23 @@ $(function(){
 
 	$('.history-btn').click(function(){
 		$('.parking-result').toggleClass('show-chart');
-		$('#map').toggleClass('small');
+		
 	});
 
-});
 
-//Toggle for the pop down - DONE
-//Ability to clear an input - DONE
-//Grab value of input and inject HTML into address div - DONE
-//Show loading window - DONE
-//Drop or expand pin, animate gradient pulse  - DONE
-//Slide result up into view with address value - DONE
-//Delay then run bar animation - DONE
-//Build Error window 
+	//Handles bottom chart with
+	/*
+	var historyWidth = $('.history-contain');
+	var dayWidth = $('.day');
+	
+	historyWidth.width(($(window).width()) * 7);
+
+	$(window).resize(function(){
+	   var newwidth = $(window).innerWidth();   
+	   historyWidth.width((newwidth * 7));   
+	});
+	*/
+
+	console.log(mapWrap);
+
+});
